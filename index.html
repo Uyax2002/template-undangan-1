@@ -51,8 +51,8 @@
 </head>
 <body class="bg-[#F4F0E8]">
 
-    <!-- 1. COVER / WELCOME AMPLOP OVERLAY (Full Screen) -->
-    <section id="cover-section" class="fixed inset-0 z-50 bg-[#6E7F3C] flex flex-col items-center justify-between p-6 text-center text-[#F7F3EA] transition-transform duration-1000 ease-in-out">
+    <!-- 1. COVER / WELCOME AMPLOP OVERLAY -->
+    <section id="cover-section" class="fixed inset-0 z-50 bg-[#6E7F3C] flex flex-col items-center justify-between p-6 text-center text-[#F7F3EA] transition-all duration-700 ease-in-out">
         <div class="absolute top-4 left-4 w-28 h-28 opacity-90 pointer-events-none">
             <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M30 30C50 30 70 50 60 80C50 110 20 100 20 70C20 40 10 30 30 30Z" fill="#E8A0B4"/>
@@ -88,14 +88,14 @@
             </p>
         </div>
 
-        <button onclick="openInvitation()" class="w-full max-w-xs bg-[#F4F0E8] text-[#4F5E2A] py-3.5 px-6 rounded-full font-medium tracking-widest text-xs uppercase shadow-lg hover:bg-white transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center space-x-2">
+        <button onclick="openInvitation()" class="w-full max-w-xs bg-[#F4F0E8] text-[#4F5E2A] py-3.5 px-6 rounded-full font-medium tracking-widest text-xs uppercase shadow-lg hover:bg-white transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center space-x-2 cursor-pointer z-50">
             <span>✉️ Buka Undangan</span>
         </button>
     </section>
 
     <!-- FLOATING MUSIC BUTTON -->
     <div class="fixed top-4 right-4 z-40">
-        <button id="music-toggle-btn" onclick="toggleMusic()" class="w-10 h-10 bg-[#6E7F3C] text-white rounded-full shadow-lg flex items-center justify-center border border-[#8FA85B]/50 transition transform hover:scale-110">
+        <button id="music-toggle-btn" onclick="toggleMusic()" class="w-10 h-10 bg-[#6E7F3C] text-white rounded-full shadow-lg flex items-center justify-center border border-[#8FA85B]/50 transition transform hover:scale-110 cursor-pointer">
             <span id="music-icon" class="text-sm">🎵</span>
         </button>
     </div>
@@ -105,11 +105,10 @@
         <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=romantic-guitars-112134.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- KONTEN UTAMA WEBSITE (Full Width Layout) -->
+    <!-- KONTEN UTAMA WEBSITE -->
     <main class="w-full">
-
         <!-- A. HERO SECTION -->
-        <section class="min-h-screen bg-[#F4F0E8] flex flex-col items-center justify-center p-6 text-center relative">
+        <section class="min-h-screen bg-[#F4F0E8] flex flex-col items-center justify-center p-8 text-center relative">
             <div class="scalloped-card p-8 w-full max-w-lg my-auto flex flex-col items-center">
                 <p class="font-serif-custom text-xs uppercase tracking-[0.25em] text-[#6E7F3C] mb-2">The Wedding Celebration</p>
                 <h1 class="font-script text-6xl text-[#C65B84] my-2">Charlotte & Theodore</h1>
@@ -124,10 +123,6 @@
                     "Two souls, one destiny. Join us in celebrating one of the most meaningful days of our lives."
                 </p>
             </div>
-            <div class="mt-8 animate-bounce text-[#6E7F3C]">
-                <span class="text-xs tracking-widest uppercase">Scroll Down</span>
-                <div class="text-sm">↓</div>
-            </div>
         </section>
 
         <!-- B. OUR LOVE STORY -->
@@ -135,13 +130,11 @@
             <div class="w-full max-w-xl space-y-6">
                 <h2 class="font-script text-5xl text-[#E8A0B4]">Our Love Story</h2>
                 <div class="w-16 h-[1px] bg-[#E8A0B4] mx-auto"></div>
-
                 <div class="relative w-48 h-64 mx-auto rounded-t-full p-2 border-2 border-dashed border-[#F4F0E8]/50 flex items-center justify-center">
                     <div class="w-full h-full rounded-t-full overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=500&q=80" alt="Love Story" class="w-full h-full object-cover">
                     </div>
                 </div>
-
                 <div class="space-y-4 font-serif-custom text-base text-[#F4F0E8] leading-relaxed max-w-lg mx-auto">
                     <p>Berawal dari pertemuan tak terduga di sebuah kafe kecil sudut kota pada musim gugur 2022, obrolan singkat sore itu menjadi awal lembaran baru hidup kami.</p>
                     <p>Hari demi hari kami lalui bersama, merajut tawa, menguatkan dalam lelah, hingga keyakinan itu tumbuh sempurna di dalam hati.</p>
@@ -158,7 +151,6 @@
                     <div class="w-16 h-[1px] bg-[#C65B84] mx-auto mt-2"></div>
                     <p class="font-serif-custom text-xs text-[#6E7F3C] tracking-widest mt-1 uppercase">Save The Date</p>
                 </div>
-
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="scalloped-card p-6 border-l-4 border-l-[#6E7F3C]">
                         <span class="bg-[#6E7F3C] text-white text-[10px] uppercase px-3 py-1 rounded-full font-semibold">Holy Matrimony</span>
@@ -170,7 +162,6 @@
                         </div>
                         <a href="https://maps.google.com" target="_blank" class="mt-4 inline-flex items-center justify-center w-full bg-[#6E7F3C] text-white py-2.5 rounded-xl text-xs font-medium shadow hover:bg-[#4F5E2A] transition">📍 View Map</a>
                     </div>
-
                     <div class="scalloped-card p-6 border-l-4 border-l-[#C65B84]">
                         <span class="bg-[#C65B84] text-white text-[10px] uppercase px-3 py-1 rounded-full font-semibold">Reception</span>
                         <h3 class="font-serif-custom font-bold text-2xl text-[#4F5E2A] mt-3">Resepsi Pernikahan</h3>
@@ -210,7 +201,6 @@
                     <div class="w-16 h-[1px] bg-[#C65B84] mx-auto mt-2"></div>
                     <p class="font-serif-custom text-xs text-[#6E7F3C] tracking-widest mt-1 uppercase">Rangkaian Acara Hari H</p>
                 </div>
-
                 <div class="scalloped-card p-6 space-y-6">
                     <div class="flex items-start space-x-4 border-b border-[#e2d8c3] pb-4">
                         <div class="w-10 h-10 rounded-full bg-[#6E7F3C] text-white flex items-center justify-center shrink-0 font-bold text-xs shadow">💍</div>
@@ -261,14 +251,14 @@
                         <div class="flex justify-between items-center"><span class="font-bold text-xs uppercase text-[#6E7F3C]">BCA</span><span class="text-xs text-stone-500 font-mono">An. Charlotte</span></div>
                         <div class="flex justify-between items-center bg-white p-3 rounded-xl border border-stone-200">
                             <span class="font-mono font-bold text-sm text-stone-800">1234567890</span>
-                            <button onclick="copyToClipboard('1234567890', this)" class="bg-[#6E7F3C] text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-[#4F5E2A]">📋 Salin</button>
+                            <button onclick="copyToClipboard('1234567890', this)" class="bg-[#6E7F3C] text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-[#4F5E2A] cursor-pointer">📋 Salin</button>
                         </div>
                     </div>
                     <div class="scalloped-card p-5 space-y-2">
                         <div class="flex justify-between items-center"><span class="font-bold text-xs uppercase text-[#C65B84]">Mandiri</span><span class="text-xs text-stone-500 font-mono">An. Theodore</span></div>
                         <div class="flex justify-between items-center bg-white p-3 rounded-xl border border-stone-200">
                             <span class="font-mono font-bold text-sm text-stone-800">0987654321</span>
-                            <button onclick="copyToClipboard('0987654321', this)" class="bg-[#C65B84] text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-[#a6486c]">📋 Salin</button>
+                            <button onclick="copyToClipboard('0987654321', this)" class="bg-[#C65B84] text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-[#a6486c] cursor-pointer">📋 Salin</button>
                         </div>
                     </div>
                 </div>
@@ -304,7 +294,7 @@
                                 <option value="Tidak">No</option>
                             </select>
                         </div>
-                        <button type="submit" class="w-full bg-[#E8A0B4] text-[#4F5E2A] font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-lg hover:bg-white transition">Kirim Konfirmasi</button>
+                        <button type="submit" class="w-full bg-[#E8A0B4] text-[#4F5E2A] font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-lg hover:bg-white transition cursor-pointer">Kirim Konfirmasi</button>
                     </form>
                 </div>
             </div>
@@ -326,7 +316,6 @@
                 <p>&copy; 2027 Sage Green Envelope Invitation.</p>
             </div>
         </footer>
-
     </main>
 
     <!-- JAVASCRIPT -->
@@ -339,9 +328,16 @@
 
         function openInvitation() {
             const cover = document.getElementById('cover-section');
+            // Menghilangkan cover secara mulus menggunakan efek fade-out & geser ke atas
+            cover.style.opacity = '0';
             cover.style.transform = 'translateY(-100%)';
+            setTimeout(() => {
+                cover.style.display = 'none';
+            }, 700);
+
+            // Play Audio
             const audio = document.getElementById('bg-audio');
-            audio.play().catch(error => console.log(error));
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
             isMusicPlaying = true;
             document.getElementById('music-icon').innerText = "🔊";
         }
